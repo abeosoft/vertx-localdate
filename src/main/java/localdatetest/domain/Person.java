@@ -3,6 +3,7 @@ package localdatetest.domain;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.vertx.codegen.annotations.DataObject;
+import io.vertx.core.json.Json;
 import io.vertx.core.json.JsonObject;
 import localdatetest.LocalDateDeserializer;
 import localdatetest.LocalDateSerializer;
@@ -27,6 +28,17 @@ public class Person {
         this.dob = person.getDob();
         this.personId = person.getPersonId();
     }
+
+    /*
+
+    // Workaround for LocalDate in PersonConverter
+    public Person(JsonObject json) {
+        Person person = Json.decodeValue(json.toString(), Person.class);
+        this.dob = person.getDob();
+        this.name = person.getName();
+        this.personId = person.getPersonId();
+    }
+    */
 
     public Person(JsonObject json) {
         PersonConverter.fromJson(json, this);
