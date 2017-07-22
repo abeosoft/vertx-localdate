@@ -1,0 +1,8 @@
+{
+  "mysql": {
+    "url": "jdbc:mysql://localhost:3306/data",
+    "user": "user",
+    "password": "user",
+    "driver_class": "com.mysql.cj.jdbc.Driver"
+  }
+}

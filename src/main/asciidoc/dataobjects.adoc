@@ -1,0 +1,14 @@
+= Cheatsheets
+
+[[Person]]
+== Person
+
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[name]]`name`|`String`|-
+|[[personId]]`personId`|`Number (Integer)`|-
+|===
+
